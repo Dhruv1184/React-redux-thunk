@@ -4,8 +4,6 @@ import './App.css'
 import { myStore } from './Redux/store'
 
 function App() {
- 
-
   return (
     <>
      <Provider store = {myStore} >

@@ -2,8 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = {
-    users:{}
+const initialstate = {
+    users:[]
 }
 
 export const userThunk = createAsyncThunk('users',async()=>{
@@ -13,7 +13,7 @@ export const userThunk = createAsyncThunk('users',async()=>{
 
 const userData = createSlice({
     name: 'users',
-    initialState: initialState,
+    initialState: initialstate,
     reducers:{
         addInitialData:(state,action)=>{
             state.users = [...action.payload]

@@ -4,18 +4,19 @@ import { useSelector,useDispatch } from 'react-redux'
 import { useSelectors } from './Redux/reducer'
 import { userThunk } from './Redux/reducer'
 import './App.css'
-
 const Data = () => {
     const dispatch = useDispatch()
-    const userData = useSelector(useSelectors)
+    const useData = useSelector(useSelectors)
+
     useEffect(()=>{
         dispatch(userThunk())
     },[])
-console.log(userData)
+
+console.log(useData)
   return (
     
     <div>
-      {userData.map((item,index)=>{
+      {useData.map((item,index)=>{
         return (
         <div key={index}>
             <div>{item.name}</div>
